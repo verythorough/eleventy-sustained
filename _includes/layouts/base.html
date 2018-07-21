@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="author" content="{{ site.author }}" />
+    <meta name="description" content="{{ site.description }}">
+    <link rel="favicon" href="/static/img/favicon.ico">
+    <link rel="alternate" href="{{ site.feed.path }}" type="application/atom+xml" title="{{ site.title }}">
+
+
+    {% if page.title %}
+      <title>{{ page.title }}</title>
+    {% else %}
+      <title>{{ site.title }}</title>
+    {% endif %}
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/prism-base16-monokai.dark.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+
+    <!-- Google Analytics -->
+    {% include analytics.html %}
+  </head>
+  <!-- Main Body-->
+  <body>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Navbar header -->
+      {% include header.html %}
+
+      {{ content }}
+
+    </div>
+    <!-- Footer -->
+    {% include footer.html %}
+  </body>
+</html>

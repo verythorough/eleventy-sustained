@@ -6,10 +6,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+  eleventyConfig.addFilter('date_to_permalink', dateObj => {
+    // const date = parseDate(dateObj)
+    return DateTime.fromJSDate(dateObj).toFormat('yyyy/MM')
   });
 
   // only content in the `posts/` directory
@@ -19,8 +18,7 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("static");
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
@@ -53,9 +51,10 @@ module.exports = function(eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 
+    // These settings match the defaults
     markdownTemplateEngine: "liquid",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
+    htmlTemplateEngine: "liquid",
+    dataTemplateEngine: "liquid",
     passthroughFileCopy: true,
     dir: {
       input: ".",

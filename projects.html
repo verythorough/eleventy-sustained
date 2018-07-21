@@ -1,0 +1,18 @@
+---
+layout: layouts/base.html
+title: Projects
+---
+
+<section id="projects">
+<div class="container">
+  <h1>Projects</h1>
+  <div class="panel panel-default">
+    <dl class="panel-body project-list">
+		{% for project in projects %}
+			<dt><a href="{{ project.url }}" target="_blank">{{ project.title }}</a></dt>
+			<dd>{{ project.description }}</dd>
+		{% endfor %}
+    </dl>
+  </div>
+</div>
+</section>

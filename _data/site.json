@@ -1,0 +1,22 @@
+{
+  "title": "Adele Goldstine",
+  "author": "Adele Goldstine",
+  "url": "https://myurl.com/",
+  "description": "Personal blog and resume",
+  "avatar": "eniac-woman.jpg",
+  "resume": "/static/sample-resume.pdf",
+  "email": "yourname@email.com",
+  "github": "username",
+  "twitter": "username",
+  "linkedin": "username",
+  "stackoverflow": "1234567/username",
+  "disqus": "username",
+  "google_analytics": "UA-12345678-1",
+  "feed": {
+    "subtitle": "I wrote the book on electronic digital computing.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://myurl.com/feed/feed.xml",
+    "id": "https://myurl.com/"
+  }
+}

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.html
+---
+
+<div class="container">
+	<h1 class="blog-title">
+		  <a href="{{ page.url }}">{{ title }}</a>
+	</h1>
+	<p class="blog-date">{{ page.date | date: "%B %e, %Y" }}</p>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="blogpost">
+			  {{ content }}
+			</div>
+		</div>
+	</div>
+</div>
