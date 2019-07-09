@@ -1,0 +1,20 @@
+---
+layout: layouts/base.html
+title: Repositories
+---
+
+<section id="repositories">
+<div class="container">
+  <h1>Repositories</h1>
+  <div class="panel panel-default">
+    <dl class="panel-body project-list">
+    {% for repo in repos %}
+      {% if repo.fork == false %}
+        <dt><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></dt>
+        <dd>{{ repo.description }}</dd>
+      {% endif %}
+		{% endfor %}
+    </dl>
+  </div>
+</div>
+</section>
